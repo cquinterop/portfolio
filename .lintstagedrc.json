@@ -1,3 +1,6 @@
 {
-  "src/**/*.tsx": "lint"
+  "src/**/*.tsx": [
+    "lint",
+    "test --findRelatedTests"
+  ]
 }
