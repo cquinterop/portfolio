@@ -1,6 +1,6 @@
 {
   "src/**/*.tsx": [
     "lint",
-    "test --findRelatedTests"
+    "test --bail --findRelatedTests"
   ]
 }
