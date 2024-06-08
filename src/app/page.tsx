@@ -1,13 +1,23 @@
-import React from 'react';
-import ChatComponent from '../components/ChatComponent';
+"use client";
 
-const HomePage: React.FC = () => {
+// import ChatComponent from '../components/ChatComponent';
+import { Canvas } from "@react-three/fiber";
+import { Loader } from "@react-three/drei";
+import { Experience } from "../components/Experience";
+import { Leva } from "leva";
+import { UI } from "../components/UI";
+
+function App() {
   return (
-    <div className="w-full h-full mx-auto p-4 bg-white rounded shadow-lg">
-      <h1 className="text-2xl font-bold mb-4">Chat with Cristian Quintero AI</h1>
-      <ChatComponent />
-    </div>
+    <>
+      <Loader />
+      <Leva />
+      <UI />
+      <Canvas shadows camera={{ position: [0, 0, 8], fov: 42 }}>
+        <Experience />
+      </Canvas>
+    </>
   );
-};
+}
 
-export default HomePage;
+export default App;
